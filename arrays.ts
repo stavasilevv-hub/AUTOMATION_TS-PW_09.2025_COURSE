@@ -21,4 +21,31 @@ let checkTypeOf = combinedArray.map((element: number | string) => {
     return `Welcome ${element}`;
   }
 });
-console.log(checkTypeOf);
+// console.log(checkTypeOf);
+
+// method filter
+let positiveNumbs: number[] = [2, 3, 4, 5, 6];
+let filteredArr: number[] = positiveNumbs.filter((num: number) => num > 3);
+// console.log("filteredArr", filteredArr);
+
+// method sort
+let sortNums: number [] = [100, 4, 30, 5, 1, 40, 6];
+// console.log (sortNums.sort());
+let sortedResult = sortNums.sort((a: number, b:number) => a-b);
+// console.log(sortedResult);
+
+// method push
+sortedResult.push(200);
+// console.log(sortedResult);
+
+// method pop
+sortedResult.pop();
+// console.log(sortedResult);
+
+// method shift
+sortedResult.shift();
+// console.log(sortedResult);
+
+// method unshift
+sortedResult.unshift(1);
+console.log(sortedResult);
