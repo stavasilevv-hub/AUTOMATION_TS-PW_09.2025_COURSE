@@ -95,7 +95,7 @@ const user: User = {
 };
 // optional parameter added later
 user.password = 123123;
-console.log(user);
+// console.log(user);
 
 
 interface UserPermissions extends User {
@@ -111,3 +111,27 @@ const secondUser: UserPermissions = {
   job: "QA",
   permissions: "denied",
 };
+
+// exerciese sum total price
+interface Product {
+  name: string;
+  price: number;
+  getTotalPrice: (quantity:number) => number;
+}
+
+const phone :Product = {
+  name: "Nokia",
+  price: 100,
+  getTotalPrice: function (quantity: number) {
+    return quantity * this.price; 
+  },
+};
+
+function orderDetails(quantity:number, product: Product ){
+  console.log(`Order for: ${product.name}`);
+  console.log(`Product quantity: ${quantity}`);
+  console.log(`Product unit price: ${product.price}$`);
+  console.log(`Total price: ${product.getTotalPrice(quantity)}$`);
+}
+
+  orderDetails(5, phone);
