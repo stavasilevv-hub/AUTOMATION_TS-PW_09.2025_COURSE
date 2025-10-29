@@ -44,6 +44,6 @@ const Customer: Customer = {name: `Mladen Petrov`,
 //customer.cart[0].price
 //customer.cart[1].price
 //....
-//total =?
+//total =? 
 
 export{};
